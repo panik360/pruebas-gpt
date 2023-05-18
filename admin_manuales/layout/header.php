@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include("../_mysql.php"); // conexion $arts
+$arts = mysqli_connect("localhost", "root", "", "pagina_1") or die("No se pudo conectar a MySQL.");
 
 // autentificacion - mejorar esto o ponerlo en un archivo
 if(isset($_SESSION["logeado"])) {
